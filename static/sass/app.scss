@@ -1,0 +1,147 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/typography/links/link-colors";
+
+@import url(http://fonts.googleapis.com/css?family=Carrois+Gothic|Muli);
+
+$buttonbg: #2f579b;
+$buttonhov: #f8f85e;
+$buttonop: 0.4;
+
+@mixin buttonbg($color, $opacity) {
+    @include background(linear-gradient(top, rgba($color, $opacity) 0%, rgba(darken($color, 10%), $opacity) 100%));
+}
+
+
+html, body {
+    background: #000;
+//    background: url(../img/bg.png);
+    background: url(../img/bg.jpg);
+//    background: #4b5d6f;
+}
+
+
+#logo {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+#sub {
+    @extend #logo;
+    text-align: center;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
+    #motto {
+        #first {
+            color: #f7dd50;
+        }
+
+        #second {
+            color: darken(#2687ca, 10%);
+        }
+        font: 4em 'Carrois Gothic', sans-serif;
+        font-weight: bold;
+    }
+    
+    #ip {
+        font: 3em 'Carrois Gothic', sans-serif;
+
+        //text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000/*, 0 0px 10px black*/;
+        //color: #000;
+        //color: darken(#4b5d6f, 30%);
+        //opacity: 0.8;
+
+        color: #fff;
+        margin-top: 0.5em;
+    }
+}
+
+#links {
+    text-align: center;
+
+    li {
+
+        a {
+            // Use this to reposition text within box
+            span {
+                position: relative;
+                top: 150px;
+                text-shadow: 1px 1px 1px #000;
+            }
+
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            text-decoration: none;
+            @include link-colors(white);
+            font: 2em 'Muli', sans-serif;
+            font-weight: bold;
+
+            // Add icon with this
+            background-repeat: no-repeat;
+            background-position: 50% 25%;
+            background-size: 50%;
+
+            $ids: "forum", "donate", "vote", "staff", "contact";
+
+            @each $id in $ids {
+                &##{$id} {
+                    background-image: url(../img/#{$id}.png);
+                }
+            }
+        }
+            
+
+        box-shadow: -1px -1px 1px rgba(white, 0.2), 1px 1px 1px #000;
+        display: inline-block;
+        //@include background(linear-gradient(top, rgba(#006e2e, 0.2) 0%, rgba(darken(#006e2e, 10%), 0.2) 100%));
+        background-color: $buttonbg;
+        @include buttonbg($buttonbg, $buttonop);
+
+        top: 0em;
+        position: relative;
+        margin-top: 2em;
+
+        /* Pad away from each other */
+        margin-left: 1em;
+        &:first-child{
+            margin-left: 0;
+        }
+        /* end pad */
+
+        border-radius: 5%;
+        @include transition-property(top, background);
+        @include transition-duration(1s);
+
+        &:hover {
+            top: -1em;
+            @include buttonbg($buttonhov, $buttonop);
+        }
+    }
+}
+
+
+/* Resize text for smaller devices */
+@media all and (max-width: 800px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    body {
+        font-size: 11px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    body {
+        font-size: 9px;
+    }
+}
