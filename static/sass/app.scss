@@ -23,6 +23,7 @@ html, body {
 //    background: url(../img/bg.png);
     background: url(../img/bg.jpg);
 //    background: #4b5d6f;
+    height: 100%;
 }
 
 
@@ -116,7 +117,7 @@ html, body {
         /* end pad */
 
         border-radius: 5%;
-        @include transition-property(top, background);
+        @include transition-property(background, top);
         @include transition-duration(1s);
 
         &:hover {
@@ -143,5 +144,75 @@ html, body {
 @media all and (max-width: 400px) {
     body {
         font-size: 9px;
+    }
+}
+
+.modal {
+    padding: 1.5em;
+    background: #fff;
+}
+
+#{headers()}{
+    font-family: 'Carrois Gothic', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+#staff_links {
+    li {
+        display: inline-block;
+        margin: 1em;
+
+        img {
+            display: block;
+            border-radius: 10%;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            margin-bottom: 0.5em;
+        }
+    }
+}
+
+#vote_links {
+    margin-top: 1em;
+
+    li {
+        display: inline-block;
+        a {
+            display: inline;
+
+            width: auto;
+            height: 3em;
+
+            line-height: 3em;
+            text-decoration: none;
+            border-radius: 15%;
+
+            margin: 0.5em;
+            padding: 0.8em;
+
+            color: white;
+            @extend #logo;
+            font-weight: bold;
+            font-family: 'Muli';
+            @include buttonbg($buttonbg, 0.9);
+            @include link-colors(white);
+
+            &:hover {
+                @include buttonbg(darken($buttonbg, 15%), 0.9);
+            }
+        }
+    }
+
+    #voteframe {
+        margin-top: 1em;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        display: block;
     }
 }

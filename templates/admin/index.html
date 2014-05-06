@@ -1,0 +1,37 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+{{ super() }}
+
+<div class="row-fluid">
+    <div>
+        {% if form %}
+        <h1>Please login</h1>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            {% for f in form if f.type != 'CSRFTokenField' %}
+                <div>
+                    {{ f.label }}
+                    {{ f }}
+                    {% if f.errors %}
+                    <ul>
+                        {% for e in f.errors %}
+                        <li>{{ e }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <button class="btn" type="submit">Submit</button>
+        </form>
+        {% else %}
+            <h5>Hello, {{ g.user.username }}</h5>
+            <p>
+                Welcome to the BreachPVP Admin panel, use the navbar above to
+                modify the lists on the homepage
+            </p>
+            <a href="{{ url_for('admin.logout_view') }}">Logout?</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
