@@ -70,6 +70,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 app.config['SECRET_KEY'] = ';pfkkfvjerhb vdhj'
 app.config['DEBUG'] = True
+app.config['FREEZER_BASE_URL'] = 'http://severeoverfl0w.github.io/BreachPVP/'
 admin = Admin(app, name='BreachPVP Admin', index_view=MyAdminIndexView())
 db = SQLAlchemy(app)
 lm = LoginManager(app)
