@@ -1,0 +1,279 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(http://fonts.googleapis.com/css?family=Carrois+Gothic|Muli);
+/* line 5, ../../../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 21, ../sass/app.scss */
+html, body {
+  background: #000;
+  background: url(../img/bg.jpg);
+  height: 100%;
+}
+
+/* line 30, ../sass/app.scss */
+#logo, #sub, #vote_links li a {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 36, ../sass/app.scss */
+#sub {
+  text-align: center;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+/* line 41, ../sass/app.scss */
+#sub #motto {
+  font: 4em 'Carrois Gothic', sans-serif;
+  font-weight: bold;
+}
+/* line 42, ../sass/app.scss */
+#sub #motto #first {
+  color: #f7dd50;
+}
+/* line 46, ../sass/app.scss */
+#sub #motto #second {
+  color: #1e6a9f;
+}
+/* line 53, ../sass/app.scss */
+#sub #ip {
+  font: 3em 'Carrois Gothic', sans-serif;
+  color: #fff;
+  margin-top: 0.5em;
+}
+
+/* line 66, ../sass/app.scss */
+#links {
+  text-align: center;
+}
+/* line 69, ../sass/app.scss */
+#links li {
+  box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.2), 1px 1px 1px black;
+  display: inline-block;
+  background-color: #2f579b;
+  background: -moz-linear-gradient(top, rgba(47, 87, 155, 0.4) 0%, rgba(35, 65, 116, 0.4) 100%);
+  background: -webkit-linear-gradient(top, rgba(47, 87, 155, 0.4) 0%, rgba(35, 65, 116, 0.4) 100%);
+  background: linear-gradient(to bottom, rgba(47, 87, 155, 0.4) 0%, rgba(35, 65, 116, 0.4) 100%);
+  top: 0em;
+  position: relative;
+  margin-top: 2em;
+  /* Pad away from each other */
+  margin-left: 1em;
+  /* end pad */
+  border-radius: 5%;
+  -moz-transition-property: background, top;
+  -o-transition-property: background, top;
+  -webkit-transition-property: background, top;
+  transition-property: background, top;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+/* line 71, ../sass/app.scss */
+#links li a {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font: 2em 'Muli', sans-serif;
+  font-weight: bold;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+  background-size: 50%;
+}
+/* line 73, ../sass/app.scss */
+#links li a span {
+  position: relative;
+  top: 150px;
+  text-shadow: 1px 1px 1px #000;
+}
+/* line 95, ../sass/app.scss */
+#links li a#forum {
+  background-image: url(../img/forum.png);
+}
+/* line 95, ../sass/app.scss */
+#links li a#donate {
+  background-image: url(../img/donate.png);
+}
+/* line 95, ../sass/app.scss */
+#links li a#vote {
+  background-image: url(../img/vote.png);
+}
+/* line 95, ../sass/app.scss */
+#links li a#staff {
+  background-image: url(../img/staff.png);
+}
+/* line 95, ../sass/app.scss */
+#links li a#contact {
+  background-image: url(../img/contact.png);
+}
+/* line 114, ../sass/app.scss */
+#links li:first-child {
+  margin-left: 0;
+}
+/* line 123, ../sass/app.scss */
+#links li:hover {
+  top: -1em;
+  background: -moz-linear-gradient(top, rgba(248, 248, 94, 0.4) 0%, rgba(246, 246, 45, 0.4) 100%);
+  background: -webkit-linear-gradient(top, rgba(248, 248, 94, 0.4) 0%, rgba(246, 246, 45, 0.4) 100%);
+  background: linear-gradient(to bottom, rgba(248, 248, 94, 0.4) 0%, rgba(246, 246, 45, 0.4) 100%);
+}
+
+/* Resize text for smaller devices */
+@media all and (max-width: 800px) {
+  /* line 133, ../sass/app.scss */
+  body {
+    font-size: 13px;
+  }
+}
+@media all and (max-width: 600px) {
+  /* line 139, ../sass/app.scss */
+  body {
+    font-size: 11px;
+  }
+}
+@media all and (max-width: 400px) {
+  /* line 145, ../sass/app.scss */
+  body {
+    font-size: 9px;
+  }
+}
+/* line 150, ../sass/app.scss */
+.modal {
+  padding: 1.5em;
+  background: #fff;
+}
+
+/* line 155, ../sass/app.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Carrois Gothic', sans-serif;
+  font-weight: bold;
+}
+
+/* line 160, ../sass/app.scss */
+h1 {
+  font-size: 3em;
+}
+
+/* line 165, ../sass/app.scss */
+#staff_links li {
+  display: inline-block;
+  margin: 1em;
+}
+/* line 169, ../sass/app.scss */
+#staff_links li img {
+  display: block;
+  border-radius: 10%;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+}
+
+/* line 180, ../sass/app.scss */
+#vote_links {
+  margin-top: 1em;
+}
+/* line 183, ../sass/app.scss */
+#vote_links li {
+  display: inline-block;
+}
+/* line 185, ../sass/app.scss */
+#vote_links li a {
+  display: inline;
+  width: auto;
+  height: 3em;
+  line-height: 3em;
+  text-decoration: none;
+  border-radius: 15%;
+  margin: 0.5em;
+  padding: 0.8em;
+  color: white;
+  font-weight: bold;
+  font-family: 'Muli';
+  background: -moz-linear-gradient(top, rgba(47, 87, 155, 0.9) 0%, rgba(35, 65, 116, 0.9) 100%);
+  background: -webkit-linear-gradient(top, rgba(47, 87, 155, 0.9) 0%, rgba(35, 65, 116, 0.9) 100%);
+  background: linear-gradient(to bottom, rgba(47, 87, 155, 0.9) 0%, rgba(35, 65, 116, 0.9) 100%);
+  color: white;
+}
+/* line 205, ../sass/app.scss */
+#vote_links li a:hover {
+  background: -moz-linear-gradient(top, rgba(29, 54, 96, 0.9) 0%, rgba(17, 32, 57, 0.9) 100%);
+  background: -webkit-linear-gradient(top, rgba(29, 54, 96, 0.9) 0%, rgba(17, 32, 57, 0.9) 100%);
+  background: linear-gradient(to bottom, rgba(29, 54, 96, 0.9) 0%, rgba(17, 32, 57, 0.9) 100%);
+}
+/* line 211, ../sass/app.scss */
+#vote_links #voteframe {
+  margin-top: 1em;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  display: block;
+}
